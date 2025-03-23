@@ -435,5 +435,6 @@ C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_b
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.h \
   C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.h \
   C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.h

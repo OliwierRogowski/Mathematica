@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Qml LinguistTools Charts)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Qml LinguistTools Charts)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Qml LinguistTools Charts Quick)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Qml LinguistTools Charts Quick)
 
 set(TS_FILES Mathematica_pl_PL.ts)
 
@@ -18,9 +18,12 @@ set(PROJECT_SOURCES
     main.cpp
     windowmathematica.cpp
     windowmathematica.h
-    Main.qml
+    MainStyle.qml
+    MathematicaWindowStyle.qml
     ${TS_FILES}
 )
+
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Mathematica
@@ -29,6 +32,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         functionobjects.h functionobjects.cpp
         functionschartspoints.h functionschartspoints.cpp
         derivativeofafunction.h derivativeofafunction.cpp
+        MainStyle.qml
+        MathematicaWindowStyle.qml
+        Main.qrc
     )
 
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
@@ -47,7 +53,7 @@ else()
 endif()
 
 # Dodanie Qt6::Qml i QtCharts do linkowania
-target_link_libraries(Mathematica PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Qml Qt${QT_VERSION_MAJOR}::Charts)
+target_link_libraries(Mathematica PRIVATE Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Qml Qt${QT_VERSION_MAJOR}::Charts )
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Mathematica)

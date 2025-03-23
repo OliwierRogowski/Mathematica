@@ -729,6 +729,22 @@ Mathematica_autogen/timestamp: \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationConfigVersionImpl.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationTargets.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlIntegration/Qt6QmlIntegrationVersionlessAliasTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaAdditionalTargetInfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfig.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfigVersion.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaConfigVersionImpl.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaDependencies.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargets-relwithdebinfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta/Qt6QmlMetaVersionlessAliasTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsAdditionalTargetInfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsConfig.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsConfigVersion.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsConfigVersionImpl.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsDependencies.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsTargets-relwithdebinfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels/Qt6QmlModelsVersionlessAliasTargets.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsAdditionalTargetInfo.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfig.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsConfigVersion.cmake \
@@ -737,6 +753,31 @@ Mathematica_autogen/timestamp: \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets-relwithdebinfo.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsTargets.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools/Qt6QmlToolsVersionlessTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptAdditionalTargetInfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfig.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersion.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptConfigVersionImpl.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptDependencies.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargets-relwithdebinfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript/Qt6QmlWorkerScriptVersionlessAliasTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickConfig.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickConfigVersion.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickConfigVersionImpl.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickDependencies.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickPlugins.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets-relwithdebinfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsAdditionalTargetInfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfig.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersion.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsConfigVersionImpl.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsDependencies.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets-relwithdebinfo.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsTargets.cmake \
+	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools/Qt6QuickToolsVersionlessTargets.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginConfig.cmake \
 	C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake \
@@ -1005,12 +1046,15 @@ Mathematica_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/CMakeLists.txt \
+	C:/Users/orogo/Desktop/Mathematica/Mathematica/Main.qrc \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/.qt/qml_imports/Mathematica_conf.cmake \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/moc_predefs.h \
+	C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.cpp \
+	C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.cpp \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.cpp \

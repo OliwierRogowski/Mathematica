@@ -4818,6 +4818,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_qml_delegate_model",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: qml_delegate_model (from target Qt6::QmlModels)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_qml_itemmodel",
 			"properties" : 
 			[
@@ -4842,6 +4854,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_qml_list_model",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: qml_list_model (from target Qt6::QmlModels)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
 			"name" : "QT_FEATURE_qml_locale",
 			"properties" : 
 			[
@@ -4860,6 +4884,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: qml_network (from target Qt6::Qml)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_qml_object_model",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: qml_object_model (from target Qt6::QmlModels)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -4908,6 +4944,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: qml_ssl (from target Qt6::Qml)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_qml_table_model",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: qml_table_model (from target Qt6::QmlModels)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -4972,6 +5020,234 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "OFF"
+		},
+		{
+			"name" : "QT_FEATURE_quick_animatedimage",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_animatedimage (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_canvas",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_canvas (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_designer",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_designer (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_draganddrop",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_draganddrop (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_flipable",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_flipable (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_gridview",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_gridview (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_itemview",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_itemview (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_listview",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_listview (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_particles",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_particles (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_path",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_path (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_pathview",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_pathview (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_pixmap_cache_threaded_download",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_pixmap_cache_threaded_download (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_positioners",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_positioners (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_repeater",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_repeater (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_shadereffect",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_shadereffect (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_sprite",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_sprite (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_tableview",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_tableview (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_treeview",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_treeview (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_quick_viewtransitions",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: quick_viewtransitions (from target Qt6::Quick)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
 		},
 		{
 			"name" : "QT_FEATURE_radiobutton",
@@ -7002,6 +7278,30 @@
 			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlIntegration"
 		},
 		{
+			"name" : "Qt6QmlMeta_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6QmlMeta."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlMeta"
+		},
+		{
+			"name" : "Qt6QmlModels_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6QmlModels."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlModels"
+		},
+		{
 			"name" : "Qt6QmlTools_DIR",
 			"properties" : 
 			[
@@ -7014,6 +7314,18 @@
 			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlTools"
 		},
 		{
+			"name" : "Qt6QmlWorkerScript_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6QmlWorkerScript."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript"
+		},
+		{
 			"name" : "Qt6Qml_DIR",
 			"properties" : 
 			[
@@ -7024,6 +7336,30 @@
 			],
 			"type" : "PATH",
 			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Qml"
+		},
+		{
+			"name" : "Qt6QuickTools_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6QuickTools."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools"
+		},
+		{
+			"name" : "Qt6Quick_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6Quick."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick"
 		},
 		{
 			"name" : "Qt6Script_DIR",

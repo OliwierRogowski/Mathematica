@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-634a745522dd889ef203.json",
+					"jsonFile" : "directory-.-Debug-cf48a9094f6c0b4b3e35.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -46,7 +46,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Mathematica::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Mathematica-Debug-f00e14c6c7e2c6179860.json",
+					"jsonFile" : "target-Mathematica-Debug-5e68c85147efe6720323.json",
 					"name" : "Mathematica",
 					"projectIndex" : 0
 				},
@@ -67,7 +67,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Mathematica_qmlimportscan::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Mathematica_qmlimportscan-Debug-6b9fb52b1f8b63df5fcd.json",
+					"jsonFile" : "target-Mathematica_qmlimportscan-Debug-686844f22fffc11f1e8a.json",
 					"name" : "Mathematica_qmlimportscan",
 					"projectIndex" : 0
 				}

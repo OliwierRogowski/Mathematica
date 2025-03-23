@@ -43,6 +43,7 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/orogo/Desktop/Mathem
 set(OLD_GLOB
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/EWIEGA46WW/moc_windowmathematica.cpp"
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/EWIEGA46WW/qrc_Main.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/mocs_compilation.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.cpp"
@@ -144,7 +145,8 @@ endif()
 # _directory_contents at C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/orogo/Desktop/Mathematica/Mathematica/*.qml")
 set(OLD_GLOB
-  "C:/Users/orogo/Desktop/Mathematica/Mathematica/Main.qml"
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/MainStyle.qml"
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/MathematicaWindowStyle.qml"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -154,6 +156,7 @@ endif()
 # _directory_contents at C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/orogo/Desktop/Mathematica/Mathematica/*.qrc")
 set(OLD_GLOB
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/Main.qrc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

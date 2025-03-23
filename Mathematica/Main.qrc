@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>MathematicaWindowStyle.qml</file>
+        <file>MainStyle.qml</file>
+    </qresource>
+</RCC>
