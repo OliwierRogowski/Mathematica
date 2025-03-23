@@ -34,6 +34,12 @@ private:
     QList<QPointF> points;  // Punkty funkcji do wykresu
     double a, b, c;  // Współczynniki funkcji kwadratowej, do przykładu
     double step = 0.1;  // Krok obliczania punktów
+<<<<<<< Updated upstream
+=======
+    int liczba1;
+    int liczba2;
+    QChar litera;
+>>>>>>> Stashed changes
     QChartView *previousChartView;
 };
 
