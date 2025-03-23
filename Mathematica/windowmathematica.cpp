@@ -94,8 +94,6 @@ QString cleanString(const QString& str) {
 void WindowMathematica::CheckFunction()
 {
     QString mainInput = MainInput->toPlainText().trimmed();
-    QChar litera;
-    int liczba1, liczba2;
     QString userInput;
     QString contentInsideBrackets;
 
