@@ -1,0 +1,5 @@
+F[_] =  - creating a function where _ is any letter for your function for example F[x] = x^2 and F[a] = x^3 is two separated functions
+
+Plot[F[<Letter>,{<range from>, <range to>}] - Drawing a function where <letter> is your function (For example: Plot[F[x]...] or Plot[F[a]...]) and <range> is your range on axis OX
+
+Plot[F[<Letter>,{<range from>, <range to>}, {<name Of The Axis OX>, <name Of the Axis OY>}] - Darwing a function with range and name of the two axises

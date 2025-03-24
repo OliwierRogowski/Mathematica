@@ -358,6 +358,9 @@ Qt6OpenGLWidgets_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6OpenGLWidgets
 //The directory containing a CMake configuration file for Qt6OpenGL.
 Qt6OpenGL_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6OpenGL
 
+//The directory containing a CMake configuration file for Qt6PrintSupport.
+Qt6PrintSupport_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport
+
 //The directory containing a CMake configuration file for Qt6QmlAssetDownloader.
 Qt6QmlAssetDownloader_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlAssetDownloader
 
@@ -381,6 +384,9 @@ Qt6QmlWorkerScript_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QmlWorkerScript
 
 //The directory containing a CMake configuration file for Qt6Qml.
 Qt6Qml_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Qml
+
+//The directory containing a CMake configuration file for Qt6Qt6PrintSupport.
+Qt6Qt6PrintSupport_DIR:PATH=Qt6Qt6PrintSupport_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for Qt6QuickTools.
 Qt6QuickTools_DIR:PATH=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6QuickTools
@@ -593,6 +599,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/orogo/anaconda3/python.exe][C:/Users/orogo/anaconda3/libs/python312.lib][C:/Users/orogo/anaconda3/include][cfound components: Interpreter Development Development.Module Development.Embed ][v3.12.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -721,6 +729,12 @@ QT_FEATURE_cross_compile:INTERNAL=OFF
 QT_FEATURE_cssparser:INTERNAL=ON
 //Qt feature: ctf (from target Qt6::Core)
 QT_FEATURE_ctf:INTERNAL=OFF
+//Qt feature: cups (from target Qt6::PrintSupport)
+QT_FEATURE_cups:INTERNAL=OFF
+//Qt feature: cupsjobwidget (from target Qt6::PrintSupport)
+QT_FEATURE_cupsjobwidget:INTERNAL=OFF
+//Qt feature: cupspassworddialog (from target Qt6::PrintSupport)
+QT_FEATURE_cupspassworddialog:INTERNAL=ON
 //Qt feature: cursor (from target Qt6::Gui)
 QT_FEATURE_cursor:INTERNAL=ON
 //Qt feature: cxx11_future (from target Qt6::Core)
@@ -1101,6 +1115,14 @@ QT_FEATURE_posix_sem:INTERNAL=ON
 QT_FEATURE_posix_shm:INTERNAL=OFF
 //Qt feature: precompile_header (from target Qt6::Core)
 QT_FEATURE_precompile_header:INTERNAL=ON
+//Qt feature: printdialog (from target Qt6::PrintSupport)
+QT_FEATURE_printdialog:INTERNAL=ON
+//Qt feature: printer (from target Qt6::PrintSupport)
+QT_FEATURE_printer:INTERNAL=ON
+//Qt feature: printpreviewdialog (from target Qt6::PrintSupport)
+QT_FEATURE_printpreviewdialog:INTERNAL=ON
+//Qt feature: printpreviewwidget (from target Qt6::PrintSupport)
+QT_FEATURE_printpreviewwidget:INTERNAL=ON
 //Qt feature: printsupport (from target Qt6::Core)
 QT_FEATURE_printsupport:INTERNAL=ON
 //Qt feature: private_tests (from target Qt6::Core)
@@ -1516,6 +1538,31 @@ Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/Mathematica
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=0113c5c3da8bb0926f031d60eb70698b
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=0113c5c3da8bb0926f031d60eb70698b
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=C:/Users/orogo/anaconda3/python.exe
+//Path to a program.
+_Python3_EXECUTABLE_DEBUG:INTERNAL=_Python3_EXECUTABLE_DEBUG-NOTFOUND
+//Path to a file.
+_Python3_INCLUDE_DIR:INTERNAL=C:/Users/orogo/anaconda3/include
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;<none>;cp312-win_amd64;;C:\Users\orogo\anaconda3\Lib;C:\Users\orogo\anaconda3\Lib;C:\Users\orogo\anaconda3\Lib\site-packages;C:\Users\orogo\anaconda3\Lib\site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=9e4b6b0d415eb5c3fb805eecd7e298ae
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python3_LIBRARY_DEBUG:INTERNAL=_Python3_LIBRARY_DEBUG-NOTFOUND
+//Path to a library.
+_Python3_LIBRARY_RELEASE:INTERNAL=C:/Users/orogo/anaconda3/libs/python312.lib
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python3_RUNTIME_LIBRARY_RELEASE:INTERNAL=C:/Users/orogo/anaconda3/python312.dll
 _Qt6_LINGUIST_TOOLS_DIR:INTERNAL=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6LinguistTools
 __qt_qml_macros_module_base_dir:INTERNAL=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Qml
 

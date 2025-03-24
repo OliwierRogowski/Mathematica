@@ -13,7 +13,8 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include "derivativeofafunction.h"
-
+#include "qcustomplot.h"
+#include <QLabel>
 
 WindowMathematica::WindowMathematica(QWidget *parent)
     : QMainWindow(parent),
@@ -22,6 +23,7 @@ WindowMathematica::WindowMathematica(QWidget *parent)
     // Tworzenie widgetów
     MainInput = new QPlainTextEdit(this);
     Wykonaj = new QPushButton("Wykonaj", this);
+
 
     // Tworzenie layoutu aplikacji
     QVBoxLayout *layout = new QVBoxLayout();
@@ -42,6 +44,8 @@ WindowMathematica::~WindowMathematica() {
     delete previousChartView;
 }
 
+
+
 bool checkSequence(const QString& str, QChar &letter, int& number1, int& number2) {
     // Usuwanie zbędnych spacji
     QString trimmedStr = str.simplified();
@@ -59,6 +63,28 @@ bool checkSequence(const QString& str, QChar &letter, int& number1, int& number2
 
     return false;
 }
+bool checkSequenceWithName(const QString& str, QChar &letter, int& number1, int& number2, QString& nameX, QString& nameY) {
+    // Usuwanie zbędnych spacji
+    QString trimmedStr = str.simplified();
+
+    // Wyrażenie regularne: przechwytywanie litery, liczb oraz nazw X i Y
+    QRegularExpression pattern(R"(^Plot\[F\[([a-zA-Z])\],\{(-?\d+),(-?\d+)\}\,\{([^\}]+),([^\}]+)\}\]$)");
+
+    QRegularExpressionMatch match = pattern.match(trimmedStr);
+
+    if (match.hasMatch()) {
+        letter = match.captured(1)[0];  // Pobranie litery między F[ ]
+        number1 = match.captured(2).toInt();  // Pierwsza liczba
+        number2 = match.captured(3).toInt();  // Druga liczba
+        nameX = match.captured(4);  // Nazwa dla X
+        nameY = match.captured(5);  // Nazwa dla Y
+        return true;
+    }
+
+    return false;
+}
+
+
 
 
 bool checkSequenceForDerivativeFunction(const QString& str, QString& input, QString& contentInsideBrackets) {
@@ -131,11 +157,30 @@ void WindowMathematica::CheckFunction()
             qDebug() << "Funkcja " << functionName << " nie została znaleziona!";
         }
     }
+
+    else if(checkSequenceWithName(mainInput, litera, liczba1, liczba2, nameX, nameY)){
+        FunctionObject *foundFunction = nullptr;
+        QString functionName = "F[" + QString(litera) + "]";
+
+        for (FunctionObject &func : functions) {
+            QString cleanFuncSyntax = cleanString(func.getFunctionSyntax());
+            if (cleanFuncSyntax == functionName) {
+                foundFunction = &func;
+                break;
+            }
+        }
+
+        if (foundFunction) {
+            PaintFunctionWithName(*foundFunction);
+        } else {
+            qDebug() << "Funkcja " << functionName << " nie została znaleziona!";
+        }
+    }
     // 3. Check for Derivative sequence like Derivative[F[x]] or Derivative[F'[x]]
     else if (checkSequenceForDerivativeFunction(mainInput, userInput, contentInsideBrackets)) {
         qDebug() << "Próbujemy obliczyć pochodną funkcji " << userInput;
 
-        // Now userInput will be "F[x]" or "F'[x]" without the "Derivative" part
+        // Now userInput will be "F[] = x^2+x+1x]" or "F'[x]" without the "Derivative" part
         QString input = userInput;
         qDebug() << "Input for derivative: " << input;
         qDebug() << "Content inside brackets: " << contentInsideBrackets;
@@ -273,44 +318,85 @@ void WindowMathematica::PaintFunction(const FunctionObject &func)
 {
     // Funkcja w postaci tekstowej, np. "x^3 + x + 2"
     QString expression = func.getFunctionValue();
-    QList<QPointF> localPoints;  // Lista punktów lokalnych dla tej funkcji
+    QVector<QPointF> localPoints;  // Lista punktów lokalnych dla tej funkcji
 
-    // Zakładając, że 'x' ma zakres od -10 do 10, obliczamy punkty z małym krokiem
+    // Zakładając, że 'x' ma zakres od liczba1 do liczba2, obliczamy punkty z małym krokiem
     for (double x = liczba1; x <= liczba2; x += 0.1) {  // Zmniejszamy krok do 0.1
         double y = evaluateFunction(expression, x);  // Obliczamy wartość funkcji dla danego x
         localPoints.append(QPointF(x, y));  // Dodajemy punkt do listy
     }
 
-    // Tworzymy wykres
-    QChart *chart = new QChart();
-    QLineSeries *series = new QLineSeries();
+    // Tworzymy wykres z QCustomPlot
+    QCustomPlot *customPlot = new QCustomPlot(this);  // Tworzymy instancję QCustomPlot
 
-    // Dodajemy punkty do serii
+    // Ustawienie danych do wykresu
+    QVector<double> xData, yData;  // Wektor danych dla QCustomPlot
     for (const QPointF &point : localPoints) {
-        series->append(point);
+        xData.append(point.x());
+        yData.append(point.y());
     }
 
-    // Dodajemy serię do wykresu
-    chart->addSeries(series);
-    chart->createDefaultAxes();
+    // Dodanie wykresu do obiektu QCustomPlot
+    customPlot->addGraph();  // Dodajemy nowy graf
+    customPlot->graph(0)->setData(xData, yData);  // Przypisujemy dane do grafu
+    customPlot->graph(0)->setPen(QPen(Qt::blue));  // Kolor wykresu (np. niebieski)
 
-    // Tworzymy widok wykresu
-    QChartView *chartView = new QChartView(chart);
-    chartView->setRenderHint(QPainter::Antialiasing);
-    chartView->setRenderHint(QPainter::TextAntialiasing);
+    // Ustawienia osi
+    customPlot->xAxis->setLabel("x");
+    customPlot->yAxis->setLabel("y");
+    customPlot->xAxis->setRange(liczba1, liczba2);  // Zakres osi X
+    customPlot->yAxis->setRange(*std::min_element(yData.begin(), yData.end()) - 1,
+                                *std::max_element(yData.begin(), yData.end()) + 1);  // Zakres osi Y
 
-    // Dodajemy widok wykresu do layoutu
+    // Tworzymy widget dla wykresu i dodajemy go do layoutu
     QWidget *graphWidget = new QWidget(this);
     QVBoxLayout *graphLayout = new QVBoxLayout(graphWidget);
-    graphLayout->addWidget(chartView);
+    graphLayout->addWidget(customPlot);  // Dodajemy wykres do layoutu
     graphWidget->setLayout(graphLayout);
-    graphWidget->setGeometry(0, 100, 800, 400);
-    graphWidget->setStyleSheet("QVBoxLayout {"
-                             "background-color: #f0f0f0;"
-                             "padding: 5px;"
-                             "width: 500px;"
-                             "height: 500px;"
-                             "}");
+    graphWidget->setGeometry(0, 100, 800, 400);  // Rozmiar widgetu
+    graphWidget->show();
+}
+
+void WindowMathematica::PaintFunctionWithName(const FunctionObject &func)
+{
+    // Funkcja w postaci tekstowej, np. "x^3 + x + 2"
+    QString expression = func.getFunctionValue();
+    QVector<QPointF> localPoints;  // Lista punktów lokalnych dla tej funkcji
+
+    // Zakładając, że 'x' ma zakres od liczba1 do liczba2, obliczamy punkty z małym krokiem
+    for (double x = liczba1; x <= liczba2; x += 0.1) {  // Zmniejszamy krok do 0.1
+        double y = evaluateFunction(expression, x);  // Obliczamy wartość funkcji dla danego x
+        localPoints.append(QPointF(x, y));  // Dodajemy punkt do listy
+    }
+
+    // Tworzymy wykres z QCustomPlot
+    QCustomPlot *customPlot = new QCustomPlot(this);  // Tworzymy instancję QCustomPlot
+
+    // Ustawienie danych do wykresu
+    QVector<double> xData, yData;  // Wektor danych dla QCustomPlot
+    for (const QPointF &point : localPoints) {
+        xData.append(point.x());
+        yData.append(point.y());
+    }
+
+    // Dodanie wykresu do obiektu QCustomPlot
+    customPlot->addGraph();  // Dodajemy nowy graf
+    customPlot->graph(0)->setData(xData, yData);  // Przypisujemy dane do grafu
+    customPlot->graph(0)->setPen(QPen(Qt::blue));  // Kolor wykresu (np. niebieski)
+
+    // Ustawienia osi
+    customPlot->xAxis->setLabel(nameX);
+    customPlot->yAxis->setLabel(nameY);
+    customPlot->xAxis->setRange(liczba1, liczba2);  // Zakres osi X
+    customPlot->yAxis->setRange(*std::min_element(yData.begin(), yData.end()) - 1,
+                                *std::max_element(yData.begin(), yData.end()) + 1);  // Zakres osi Y
+
+    // Tworzymy widget dla wykresu i dodajemy go do layoutu
+    QWidget *graphWidget = new QWidget(this);
+    QVBoxLayout *graphLayout = new QVBoxLayout(graphWidget);
+    graphLayout->addWidget(customPlot);  // Dodajemy wykres do layoutu
+    graphWidget->setLayout(graphLayout);
+    graphWidget->setGeometry(0, 100, 800, 400);  // Rozmiar widgetu
     graphWidget->show();
 }
 

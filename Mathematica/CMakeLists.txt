@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Qml LinguistTools Charts Quick)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Qml LinguistTools Charts Quick)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Qml LinguistTools Charts Quick PrintSupport)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Qml LinguistTools Charts Quick PrintSupport)
 
 set(TS_FILES Mathematica_pl_PL.ts)
 
@@ -20,7 +20,12 @@ set(PROJECT_SOURCES
     windowmathematica.h
     MainStyle.qml
     MathematicaWindowStyle.qml
+    include/qcustomplot.cpp
     ${TS_FILES}
+)
+
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/include  # Ścieżka do katalogu z nagłówkami
 )
 
 
@@ -53,7 +58,7 @@ else()
 endif()
 
 # Dodanie Qt6::Qml i QtCharts do linkowania
-target_link_libraries(Mathematica PRIVATE Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Qml Qt${QT_VERSION_MAJOR}::Charts )
+target_link_libraries(Mathematica PRIVATE Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Qml Qt${QT_VERSION_MAJOR}::Charts Qt${QT_VERSION_MAJOR}::PrintSupport)
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Mathematica)

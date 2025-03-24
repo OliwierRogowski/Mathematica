@@ -886,6 +886,16 @@
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickAdditionalTargetInfo.cmake",
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickPlugins.cmake",
 		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Quick/Qt6QuickVersionlessAliasTargets.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersion.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfigVersionImpl.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportDependencies.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportAdditionalTargetInfo.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportPlugins.cmake",
+		"C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6PrintSupport/Qt6PrintSupportVersionlessAliasTargets.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
 		"C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/.qt/qml_imports/Mathematica_conf.cmake",
 		"C:/Users/orogo/Desktop/Mathematica/Mathematica/Main.qrc"
@@ -915,6 +925,12 @@
 			null
 		],
 		[
+			"C:/Users/orogo/Desktop/Mathematica/Mathematica/include/qcustomplot.h",
+			"MU",
+			"6YEA5652QU/moc_qcustomplot.cpp",
+			null
+		],
+		[
 			"C:/Users/orogo/Desktop/Mathematica/Mathematica/windowmathematica.h",
 			"MU",
 			"EWIEGA46WW/moc_windowmathematica.cpp",
@@ -934,6 +950,7 @@
 		"QT_NETWORK_LIB",
 		"QT_OPENGLWIDGETS_LIB",
 		"QT_OPENGL_LIB",
+		"QT_PRINTSUPPORT_LIB",
 		"QT_QMLINTEGRATION_LIB",
 		"QT_QMLMETA_LIB",
 		"QT_QMLMODELS_LIB",
@@ -957,6 +974,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"C:/Users/orogo/Desktop/Mathematica/Mathematica/include",
 		"C:/Qt/6.8.2/mingw_64/include/QtCore",
 		"C:/Qt/6.8.2/mingw_64/include",
 		"C:/Qt/6.8.2/mingw_64/mkspecs/win32-g++",
@@ -972,6 +990,7 @@
 		"C:/Qt/6.8.2/mingw_64/include/QtWidgets",
 		"C:/Qt/6.8.2/mingw_64/include/QtCharts",
 		"C:/Qt/6.8.2/mingw_64/include/QtOpenGLWidgets",
+		"C:/Qt/6.8.2/mingw_64/include/QtPrintSupport",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
@@ -1024,6 +1043,11 @@
 		],
 		[
 			"C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/orogo/Desktop/Mathematica/Mathematica/include/qcustomplot.cpp",
 			"MU",
 			null
 		],
