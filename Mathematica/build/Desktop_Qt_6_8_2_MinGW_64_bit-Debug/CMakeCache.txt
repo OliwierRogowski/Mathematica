@@ -593,6 +593,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python3
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[C:/Users/orogo/anaconda3/python.exe][C:/Users/orogo/anaconda3/libs/python312.lib][C:/Users/orogo/anaconda3/include][cfound components: Interpreter Development Development.Module Development.Embed ][v3.12.3()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding WrapAtomic
@@ -1516,6 +1518,31 @@ Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/Mathematica
+//Compiler reason failure
+_Python3_Compiler_REASON_FAILURE:INTERNAL=
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=0113c5c3da8bb0926f031d60eb70698b
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=0113c5c3da8bb0926f031d60eb70698b
+//Development reason failure
+_Python3_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python3_EXECUTABLE:INTERNAL=C:/Users/orogo/anaconda3/python.exe
+//Path to a program.
+_Python3_EXECUTABLE_DEBUG:INTERNAL=_Python3_EXECUTABLE_DEBUG-NOTFOUND
+//Path to a file.
+_Python3_INCLUDE_DIR:INTERNAL=C:/Users/orogo/anaconda3/include
+//Python3 Properties
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;3;64;<none>;cp312-win_amd64;;C:\Users\orogo\anaconda3\Lib;C:\Users\orogo\anaconda3\Lib;C:\Users\orogo\anaconda3\Lib\site-packages;C:\Users\orogo\anaconda3\Lib\site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=9e4b6b0d415eb5c3fb805eecd7e298ae
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python3_LIBRARY_DEBUG:INTERNAL=_Python3_LIBRARY_DEBUG-NOTFOUND
+//Path to a library.
+_Python3_LIBRARY_RELEASE:INTERNAL=C:/Users/orogo/anaconda3/libs/python312.lib
+//NumPy reason failure
+_Python3_NumPy_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python3_RUNTIME_LIBRARY_RELEASE:INTERNAL=C:/Users/orogo/anaconda3/python312.dll
 _Qt6_LINGUIST_TOOLS_DIR:INTERNAL=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6LinguistTools
 __qt_qml_macros_module_base_dir:INTERNAL=C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6Qml
 

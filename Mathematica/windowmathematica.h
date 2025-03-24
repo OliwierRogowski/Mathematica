@@ -39,6 +39,8 @@ private:
     int liczba2;
     QChar litera;
     QChartView *previousChartView;
+    QGraphicsView *graphicsView;  // Widok grafiki dla wykresu
+    QGraphicsScene *scene;
 };
 
 #endif // WINDOWMATHEMATICA_H

@@ -14,6 +14,7 @@
 #include <QQmlApplicationEngine>
 #include "derivativeofafunction.h"
 
+
 WindowMathematica::WindowMathematica(QWidget *parent)
     : QMainWindow(parent),
     previousChartView(nullptr)  // Inicjalizacja zmiennej do przechowywania poprzedniego wykresu
