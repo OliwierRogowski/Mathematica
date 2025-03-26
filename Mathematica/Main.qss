@@ -1,0 +1,7 @@
+QLineEdit {
+    background-color
+}
+QMainWindow {
+    min-width: 1000px;
+    min-height: 1000px;
+}

@@ -10,6 +10,8 @@
 #include <QChartView>
 #include "derivativeofafunction.h"
 #include <QLabel>
+#include <QLineEdit>
+#include <QVBoxLayout>
 
 class WindowMathematica : public QMainWindow
 {
@@ -22,15 +24,26 @@ public:
 private slots:
     void CheckFunction();
 
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+
 private:
     void Function();
     void DerivativeFunction(QString valueFunction);
     void PaintFunction(const FunctionObject& func);
     void PaintFunctionWithName(const FunctionObject& func);
+    void AddLabelAndInput(const QString &labelText, bool success);
+    void AddNewInputLine();
 
-    QPlainTextEdit *MainInput;
-    QPushButton *Wykonaj;
+    QList<QLineEdit*> dynamicInputs;
 
+
+    QVBoxLayout *layout;  // Layout dla widgetów
+    QWidget *centralWidget; // Centralny widget
+
+    QList<QLineEdit*> inputs;
+
+    QLineEdit *MainInput;
     QList<DerivativeOfAFunction> derivativeFunctions;
     QList<FunctionObject> functions;  // Lista funkcji
     QList<functionsChartsPoints> chartPoints;  // Lista punktów funkcji
@@ -45,10 +58,6 @@ private:
     QChartView *previousChartView;
     QGraphicsView *graphicsView;  // Widok grafiki dla wykresu
     QGraphicsScene *scene;
-
-
-
-
 };
 
 #endif // WINDOWMATHEMATICA_H

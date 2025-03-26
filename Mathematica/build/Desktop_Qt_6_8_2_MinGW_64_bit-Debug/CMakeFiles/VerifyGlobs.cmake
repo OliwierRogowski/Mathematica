@@ -45,6 +45,7 @@ set(OLD_GLOB
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/6YEA5652QU/moc_qcustomplot.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/EWIEGA46WW/moc_windowmathematica.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/EWIEGA46WW/qrc_Main.cpp"
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/EWIEGA46WW/qrc_Styles.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/mocs_compilation.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.cpp"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.cpp"
@@ -161,6 +162,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/orogo/Desktop/Mathematica/Mathematica/*.qrc")
 set(OLD_GLOB
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/Main.qrc"
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/Styles.qrc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

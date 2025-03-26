@@ -15,35 +15,67 @@
 #include "derivativeofafunction.h"
 #include "qcustomplot.h"
 #include <QLabel>
+#include <QFile>
+#include <QKeyEvent>
 
 WindowMathematica::WindowMathematica(QWidget *parent)
     : QMainWindow(parent),
     previousChartView(nullptr)  // Inicjalizacja zmiennej do przechowywania poprzedniego wykresu
 {
-    // Tworzenie widgetów
-    MainInput = new QPlainTextEdit(this);
-    Wykonaj = new QPushButton("Wykonaj", this);
-
-
     // Tworzenie layoutu aplikacji
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->addWidget(MainInput);
-    layout->addWidget(Wykonaj);
+    layout = new QVBoxLayout();
 
-    // Dodanie layout do głównej aplikacji
-    QWidget *centralWidget = new QWidget(this);
+    // Tworzenie początkowego QLineEdit
+    QLineEdit *firstInput = new QLineEdit(this);
+    layout->addWidget(firstInput);
+
+    // Dodanie layoutu do głównej aplikacji
+    centralWidget = new QWidget(this);
     centralWidget->setLayout(layout);
     setCentralWidget(centralWidget);
 
-    // Podłączenie przycisku do sprawdzenia funkcji
-    connect(Wykonaj, &QPushButton::clicked, this, &WindowMathematica::CheckFunction);
+    // Dodaj początkowy input do listy
+    inputs.append(firstInput);
+
+    // Połącz sygnał returnPressed z metodą, która będzie wywoływana przy naciśnięciu Enter
+    connect(firstInput, &QLineEdit::returnPressed, [this, firstInput](){
+        CheckFunction();  // wykonanie funkcji przy naciśnięciu Enter
+        AddNewInputLine();  // Dodanie nowego inputu
+    });
 }
 
 WindowMathematica::~WindowMathematica() {
     // Usuwamy poprzedni wykres (jeśli istnieje)
     delete previousChartView;
+    qDeleteAll(inputs);  // Usuwamy wszystkie dynamicznie dodane QLineEdit
 }
 
+void WindowMathematica::keyPressEvent(QKeyEvent *event) {
+    if (event->key() == Qt::Key_Return && event->modifiers() == Qt::ShiftModifier) {
+        // Jeśli naciśnięto Shift + Enter, dodaj nowy input
+        AddNewInputLine();
+    } else {
+        // Domyślna obsługa innych klawiszy
+        QMainWindow::keyPressEvent(event);
+    }
+}
+
+void WindowMathematica::AddNewInputLine() {
+    // Tworzymy nowy QLineEdit
+    QLineEdit *newInput = new QLineEdit(this);
+
+    // Połącz nowy QLineEdit z funkcją, która będzie wykonywana po naciśnięciu Enter
+    connect(newInput, &QLineEdit::returnPressed, [this, newInput](){
+        CheckFunction();  // Wykonanie funkcji przy naciśnięciu Enter
+        AddNewInputLine();  // Dodanie kolejnego inputu
+    });
+
+    // Dodaj nowy QLineEdit do layoutu
+    layout->addWidget(newInput);
+
+    // Dodaj do listy wejściowych pól tekstowych
+    inputs.append(newInput);
+}
 
 
 bool checkSequence(const QString& str, QChar &letter, int& number1, int& number2) {
@@ -63,6 +95,7 @@ bool checkSequence(const QString& str, QChar &letter, int& number1, int& number2
 
     return false;
 }
+
 bool checkSequenceWithName(const QString& str, QChar &letter, int& number1, int& number2, QString& nameX, QString& nameY) {
     // Usuwanie zbędnych spacji
     QString trimmedStr = str.simplified();
@@ -120,7 +153,7 @@ QString cleanString(const QString& str) {
 
 void WindowMathematica::CheckFunction()
 {
-    QString mainInput = MainInput->toPlainText().trimmed();
+    QString mainInput = MainInput->text().trimmed();
     QString userInput;
     QString contentInsideBrackets;
 
@@ -171,7 +204,7 @@ void WindowMathematica::CheckFunction()
         }
 
         if (foundFunction) {
-            PaintFunctionWithName(*foundFunction);
+            PaintFunction(*foundFunction);
         } else {
             qDebug() << "Funkcja " << functionName << " nie została znaleziona!";
         }
@@ -212,49 +245,37 @@ void WindowMathematica::CheckFunction()
 }
 
 
+
 void WindowMathematica::DerivativeFunction(QString value) {
-    // Zmienna przechowująca pochodną funkcji
     QString derivativeValue = value;
 
-    // Sprawdzenie, czy funkcja zawiera 'x' (na przykład 'x^2', 'x', itp.)
     if (derivativeValue.contains("x")) {
-        // Prosta analiza składniowa: różniczkowanie podstawowych funkcji
-        // Zamiana x^n na n*x^(n-1) dla x^n
-        QRegularExpression powerPattern("x\\^(-?\\d+)");  // Wyszukiwanie wzoru 'x^n'
+        QRegularExpression powerPattern("x\\^(-?\\d+)");
         QRegularExpressionMatchIterator it = powerPattern.globalMatch(derivativeValue);
 
-        // Przeanalizuj każdy przypadek 'x^n'
         while (it.hasNext()) {
             QRegularExpressionMatch match = it.next();
-            QString powerStr = match.captured(1);  // Wartość potęgi (np. '2' z 'x^2')
+            QString powerStr = match.captured(1);
             bool ok;
             int power = powerStr.toInt(&ok);
             if (ok && power != 0) {
-                // Obliczamy pochodną: n*x^(n-1)
                 int newPower = power - 1;
                 QString newTerm = QString::number(power) + "*x^" + QString::number(newPower);
-                derivativeValue.replace(match.captured(0), newTerm);  // Zamieniamy 'x^n' na 'n*x^(n-1)'
+                derivativeValue.replace(match.captured(0), newTerm);
             } else if (power == 0) {
-                // Jeśli potęga to 0 (stała), pochodna jest 0
                 derivativeValue.replace(match.captured(0), "0");
             }
         }
 
-        // Usuń zbędne elementy i uprość wyrażenie
-        derivativeValue = derivativeValue.replace(QRegularExpression("([\\+\\-])0*x\\^0"), "");  // Usuń "0*x^0"
+        derivativeValue = derivativeValue.replace(QRegularExpression("([\\+\\-])0*x\\^0"), "");
 
-        // Obsługa funkcji, które zawierają zmienną 'x'
         qDebug() << "Pochodna funkcji: " << derivativeValue;
     } else {
         qDebug() << "Brak zmiennej 'x' w funkcji do obliczenia pochodnej!";
     }
 
-    // Tworzymy nowy obiekt DerivativeOfAFunction
     DerivativeOfAFunction newDerivativeFunction("F'[" + value + "]", derivativeValue);
-
-    // Dodanie pochodnej do listy funkcji pochodnych
-    derivativeFunctions.append(newDerivativeFunction);  // Dodanie do listy funkcji pochodnych
-
+    derivativeFunctions.append(newDerivativeFunction);
     qDebug() << "Pochodna funkcji: " << derivativeValue;
 }
 
@@ -316,48 +337,51 @@ void WindowMathematica::Function()
 
 void WindowMathematica::PaintFunction(const FunctionObject &func)
 {
-    // Funkcja w postaci tekstowej, np. "x^3 + x + 2"
+    // Create the function chart using QCustomPlot
+    QVector<QPointF> localPoints;
     QString expression = func.getFunctionValue();
-    QVector<QPointF> localPoints;  // Lista punktów lokalnych dla tej funkcji
 
-    // Zakładając, że 'x' ma zakres od liczba1 do liczba2, obliczamy punkty z małym krokiem
-    for (double x = liczba1; x <= liczba2; x += 0.1) {  // Zmniejszamy krok do 0.1
-        double y = evaluateFunction(expression, x);  // Obliczamy wartość funkcji dla danego x
-        localPoints.append(QPointF(x, y));  // Dodajemy punkt do listy
+    for (double x = liczba1; x <= liczba2; x += 0.1) {
+        double y = evaluateFunction(expression, x);
+        localPoints.append(QPointF(x, y));
     }
 
-    // Tworzymy wykres z QCustomPlot
-    QCustomPlot *customPlot = new QCustomPlot(this);  // Tworzymy instancję QCustomPlot
+    // Create a new custom plot chart
+    QCustomPlot *customPlot = new QCustomPlot(this);
 
-    // Ustawienie danych do wykresu
-    QVector<double> xData, yData;  // Wektor danych dla QCustomPlot
+    QVector<double> xData, yData;
     for (const QPointF &point : localPoints) {
         xData.append(point.x());
         yData.append(point.y());
     }
 
-    // Dodanie wykresu do obiektu QCustomPlot
-    customPlot->addGraph();  // Dodajemy nowy graf
-    customPlot->graph(0)->setData(xData, yData);  // Przypisujemy dane do grafu
-    customPlot->graph(0)->setPen(QPen(Qt::blue));  // Kolor wykresu (np. niebieski)
+    customPlot->addGraph();
+    customPlot->graph(0)->setData(xData, yData);
+    customPlot->graph(0)->setPen(QPen(Qt::blue));
 
-    // Ustawienia osi
-    customPlot->xAxis->setLabel("x");
-    customPlot->yAxis->setLabel("y");
-    customPlot->xAxis->setRange(liczba1, liczba2);  // Zakres osi X
+
+    if(nameX == "" && nameY== ""){
+        nameX= "x";
+        nameX= "y";
+    }
+    else if(nameX == "" && nameY !=""){
+        nameX= "x";
+    }
+    else if(nameX != "" && nameY ==""){
+        nameY= "y";
+    }
+
+
+    customPlot->xAxis->setLabel(nameX);
+    customPlot->yAxis->setLabel(nameY);
+    customPlot->xAxis->setRange(liczba1, liczba2);
     customPlot->yAxis->setRange(*std::min_element(yData.begin(), yData.end()) - 1,
-                                *std::max_element(yData.begin(), yData.end()) + 1);  // Zakres osi Y
+                                *std::max_element(yData.begin(), yData.end()) + 1);
 
-    // Tworzymy widget dla wykresu i dodajemy go do layoutu
-    QWidget *graphWidget = new QWidget(this);
-    QVBoxLayout *graphLayout = new QVBoxLayout(graphWidget);
-    graphLayout->addWidget(customPlot);  // Dodajemy wykres do layoutu
-    graphWidget->setLayout(graphLayout);
-    graphWidget->setGeometry(0, 100, 800, 400);  // Rozmiar widgetu
-    graphWidget->show();
+    // Add the chart to the layout
+    layout->addWidget(customPlot);
 }
-
-void WindowMathematica::PaintFunctionWithName(const FunctionObject &func)
+/*void WindowMathematica::PaintFunctionWithName(const FunctionObject &func)
 {
     // Funkcja w postaci tekstowej, np. "x^3 + x + 2"
     QString expression = func.getFunctionValue();
@@ -391,15 +415,9 @@ void WindowMathematica::PaintFunctionWithName(const FunctionObject &func)
     customPlot->yAxis->setRange(*std::min_element(yData.begin(), yData.end()) - 1,
                                 *std::max_element(yData.begin(), yData.end()) + 1);  // Zakres osi Y
 
-    // Tworzymy widget dla wykresu i dodajemy go do layoutu
-    QWidget *graphWidget = new QWidget(this);
-    QVBoxLayout *graphLayout = new QVBoxLayout(graphWidget);
-    graphLayout->addWidget(customPlot);  // Dodajemy wykres do layoutu
-    graphWidget->setLayout(graphLayout);
-    graphWidget->setGeometry(0, 100, 800, 400);  // Rozmiar widgetu
-    graphWidget->show();
-}
-
+    // Dodajemy wykres do layoutu
+    layout->addWidget(customPlot);
+}*/
 
 
 

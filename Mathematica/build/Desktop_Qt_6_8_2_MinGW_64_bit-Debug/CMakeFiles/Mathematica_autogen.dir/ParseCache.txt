@@ -1130,18 +1130,25 @@ C:/Users/orogo/Desktop/Mathematica/Mathematica/windowmathematica.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsView
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QGraphicsWidget
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLabel
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QLineEdit
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QMainWindow
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPlainTextEdit
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QPushButton
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/QVBoxLayout
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractbutton.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qboxlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsitem.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicslayoutitem.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsscene.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicsview.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgraphicswidget.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qgridlayout.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlabel.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayout.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlayoutitem.h
+ mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qlineedit.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qplaintextedit.h
  mdp:C:/Qt/6.8.2/mingw_64/include/QtWidgets/qpushbutton.h

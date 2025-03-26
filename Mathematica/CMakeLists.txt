@@ -39,7 +39,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         derivativeofafunction.h derivativeofafunction.cpp
         MainStyle.qml
         MathematicaWindowStyle.qml
-        Main.qrc
+        Styles.qrc
     )
 
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

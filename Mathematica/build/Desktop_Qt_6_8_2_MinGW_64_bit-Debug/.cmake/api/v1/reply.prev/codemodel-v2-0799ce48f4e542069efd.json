@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1913dd6fb27d71fb1979.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Mathematica",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Mathematica::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mathematica-Debug-706c0110d8062fb94fd2.json",
+					"name" : "Mathematica",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Mathematica_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mathematica_autogen-Debug-182203d49963425523e3.json",
+					"name" : "Mathematica_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Mathematica_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mathematica_autogen_timestamp_deps-Debug-09607cf41dc0462583c9.json",
+					"name" : "Mathematica_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Mathematica_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Mathematica_qmlimportscan-Debug-92632a852c217f6514ce.json",
+					"name" : "Mathematica_qmlimportscan",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/orogo/Desktop/Mathematica/Mathematica"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
