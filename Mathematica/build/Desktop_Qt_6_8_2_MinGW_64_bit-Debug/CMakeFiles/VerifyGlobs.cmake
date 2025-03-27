@@ -71,6 +71,7 @@ endif()
 # _directory_contents at C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/orogo/Desktop/Mathematica/Mathematica/*.h")
 set(OLD_GLOB
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/DynamicInput.h"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/moc_predefs.h"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.h"
   "C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.h"
@@ -105,6 +106,7 @@ endif()
 # _directory_contents at C:/Qt/6.8.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/orogo/Desktop/Mathematica/Mathematica/*.hpp")
 set(OLD_GLOB
+  "C:/Users/orogo/Desktop/Mathematica/Mathematica/include/exprtk.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

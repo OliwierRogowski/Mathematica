@@ -12,6 +12,9 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QVBoxLayout>
+#include "DynamicInput.h"
+
+class DynamicInput;
 
 class WindowMathematica : public QMainWindow
 {
@@ -25,7 +28,7 @@ private slots:
     void CheckFunction();
 
 protected:
-    void keyPressEvent(QKeyEvent *event) override;
+    //void keyPressEvent(QKeyEvent *event) override;
 
 private:
     void Function();
@@ -34,9 +37,13 @@ private:
     void PaintFunctionWithName(const FunctionObject& func);
     void AddLabelAndInput(const QString &labelText, bool success);
     void AddNewInputLine();
+    void Solve(QString leftSide, QString rightSide);
+    double solveEquation(QString equation, double start, double end, double tolerance = 1e-6, int maxIterations = 100);
 
     QList<QLineEdit*> dynamicInputs;
 
+
+    DynamicInput* dynamicInput;
 
     QVBoxLayout *layout;  // Layout dla widgetów
     QWidget *centralWidget; // Centralny widget
@@ -54,6 +61,8 @@ private:
     int liczba2;
     QString nameX;
     QString nameY;
+    QString LeftSide;   // Lewa strona równania
+    QString RightSide;
     QChar litera;
     QChartView *previousChartView;
     QGraphicsView *graphicsView;  // Widok grafiki dla wykresu

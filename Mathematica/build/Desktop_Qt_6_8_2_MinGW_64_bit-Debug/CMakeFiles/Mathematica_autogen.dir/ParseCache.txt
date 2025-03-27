@@ -1366,6 +1366,7 @@ C:/Users/orogo/Desktop/Mathematica/Mathematica/windowmathematica.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+ mdp:C:/Users/orogo/Desktop/Mathematica/Mathematica/DynamicInput.h
  mdp:C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/Mathematica_autogen/moc_predefs.h
  mdp:C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.h
  mdp:C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.h
@@ -1378,3 +1379,6 @@ C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.cpp
 C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.cpp
 C:/Users/orogo/Desktop/Mathematica/Mathematica/main.cpp
 C:/Users/orogo/Desktop/Mathematica/Mathematica/windowmathematica.cpp
+C:/Users/orogo/Desktop/Mathematica/Mathematica/DynamicInput.h
+C:/Users/orogo/Desktop/Mathematica/Mathematica/dynamicinput.h
+C:/Users/orogo/Desktop/Mathematica/Mathematica/include/exprtk.hpp

@@ -21,6 +21,7 @@ set(PROJECT_SOURCES
     MainStyle.qml
     MathematicaWindowStyle.qml
     include/qcustomplot.cpp
+    include/exprtk.hpp
     ${TS_FILES}
 )
 
@@ -40,6 +41,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MainStyle.qml
         MathematicaWindowStyle.qml
         Styles.qrc
+        dynamicinput.h
     )
 
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

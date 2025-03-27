@@ -907,6 +907,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/orogo/Desktop/Mathematica/Mathematica/DynamicInput.h",
+			"MU",
+			"EWIEGA46WW/moc_DynamicInput.cpp",
+			null
+		],
+		[
 			"C:/Users/orogo/Desktop/Mathematica/Mathematica/derivativeofafunction.h",
 			"MU",
 			"EWIEGA46WW/moc_derivativeofafunction.cpp",
@@ -922,6 +928,12 @@
 			"C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.h",
 			"MU",
 			"EWIEGA46WW/moc_functionschartspoints.cpp",
+			null
+		],
+		[
+			"C:/Users/orogo/Desktop/Mathematica/Mathematica/include/exprtk.hpp",
+			"MU",
+			"6YEA5652QU/moc_exprtk.cpp",
 			null
 		],
 		[

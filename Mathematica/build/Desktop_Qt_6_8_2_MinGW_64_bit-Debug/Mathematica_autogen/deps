@@ -1559,6 +1559,7 @@ Mathematica_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/CMakeLists.txt \
+	C:/Users/orogo/Desktop/Mathematica/Mathematica/DynamicInput.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/Styles.qrc \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/.qt/qml_imports/Mathematica_conf.cmake \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/build/Desktop_Qt_6_8_2_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
@@ -1572,6 +1573,7 @@ Mathematica_autogen/timestamp: \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/functionobjects.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.cpp \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/functionschartspoints.h \
+	C:/Users/orogo/Desktop/Mathematica/Mathematica/include/exprtk.hpp \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/include/qcustomplot.cpp \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/include/qcustomplot.h \
 	C:/Users/orogo/Desktop/Mathematica/Mathematica/main.cpp \
